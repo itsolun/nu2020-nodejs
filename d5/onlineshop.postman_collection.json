@@ -7,6 +7,26 @@
 	"item": [
 		{
 			"name": "add product",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c71af27b-415d-4285-a799-31e554edd42f",
+						"exec": [
+							"pm.test(\"Status test\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"    pm.response.json()\r",
+							"});\r",
+							"\r",
+							"pm.test(\"product id is 1\", () => {\r",
+							"  const responseJson = pm.response.json();\r",
+							"  pm.expect(responseJson[0].id).to.eql(1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -34,12 +54,32 @@
 			"response": []
 		},
 		{
-			"name": "index get /products/1",
+			"name": "get /products/1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a2c40b7e-b73c-432d-9d83-a9b71058d654",
+						"exec": [
+							"pm.test(\"Status test\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"    pm.response.json()\r",
+							"});\r",
+							"\r",
+							"pm.test(\"product id is 1\", () => {\r",
+							"  const responseJson = pm.response.json();\r",
+							"  pm.expect(responseJson.name).to.eql(\"Noodles\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/products/Rice",
+					"raw": "http://localhost:3000/products/Noodles",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -47,7 +87,7 @@
 					"port": "3000",
 					"path": [
 						"products",
-						"Rice"
+						"Noodles"
 					]
 				}
 			},
@@ -55,6 +95,26 @@
 		},
 		{
 			"name": "update product by id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c4912cbe-050e-4fa9-b9e7-402854f4adae",
+						"exec": [
+							"pm.test(\"Status test\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"    pm.response.json()\r",
+							"});\r",
+							"\r",
+							"pm.test(\"product id is 1\", () => {\r",
+							"  const responseJson = pm.response.json();\r",
+							"  pm.expect(responseJson.name).to.eql(\"new name\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "PUT",
 				"header": [],
@@ -84,11 +144,31 @@
 		},
 		{
 			"name": "Delet product by id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "82c41daf-9bcc-482e-b913-7c2c92893449",
+						"exec": [
+							"pm.test(\"Status test\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"    pm.response.json()\r",
+							"});\r",
+							"\r",
+							"pm.test(\"product id is 1\", () => {\r",
+							"  const responseJson = pm.response.json();\r",
+							"  pm.expect(responseJson.length).to.eql(5);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/products/1",
+					"raw": "http://localhost:3000/products/5",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -96,7 +176,7 @@
 					"port": "3000",
 					"path": [
 						"products",
-						"1"
+						"5"
 					]
 				}
 			},
@@ -104,6 +184,26 @@
 		},
 		{
 			"name": "index get All products",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c5141377-50fa-4561-8263-5ca0b6e43a23",
+						"exec": [
+							"pm.test(\"Status test\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"    pm.response.json()\r",
+							"});\r",
+							"\r",
+							"pm.test(\"product id is 1\", () => {\r",
+							"  const responseJson = pm.response.json();\r",
+							"  pm.expect(responseJson[0].id).to.eql(1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
 				"header": [],
