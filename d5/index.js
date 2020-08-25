@@ -64,6 +64,8 @@ app.post(productbaseurl, function (req, res) {
   app.put(productbaseurl+'/:id', function (req, res) {
     let ids = parseInt(req.params.id);
     const product = products.find(p => p.id === ids);
-    res.send('update product '+product.name);
+    product.name = req.body.name;
+    product.price = req.body.price
+    res.json(product);
   }) 
 app.listen(3000)
