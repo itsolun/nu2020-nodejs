@@ -3,7 +3,7 @@
 const express = require('express');
 var app = express();
 
-app.use(express.static('uploads'));
+app.use(express.static('./d8/fileuploader/uploads'));
 
 const fileupload = require('express-fileupload');
 
