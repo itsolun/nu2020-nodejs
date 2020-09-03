@@ -1,0 +1,26 @@
+{
+  "name": "meanauthapp",
+  "version": "1.0.0",
+  "description": "mean stack auth app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" exit 1\""
+  },
+  "dependencies": {
+    "bcryptjs": "^0.7.12",
+    "body-parser": "1.19.0",
+    "cors": "2.8.5",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.0.0",
+    "mongoose": "*",
+    "passport": "^0.2.0",
+    "passport-facebook": "^1.0.3",
+    "passport-google": "^0.3.0",
+    "passport-jwt": "4.0.0",
+    "passport-local": "^1.0.0",
+    "passport-twitter": "^1.0.2",
+    "q": "^1.0.1"
+  },
+  "author": "mahmoud",
+  "license": "ISC"
+}
